@@ -75,13 +75,23 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="flex items-baseline justify-center space-x-2"
+            className="flex justify-center"
           >
-            <span className="text-5xl md:text-7xl font-extrabold tracking-tighter">
-              RAVE
-            </span>
-            <span className="text-sm md:text-base font-light text-gray-400 tracking-widest uppercase">
-              Est. 25
+            {/* Wrapper centers by RAVE width only */}
+            <span className="relative inline-block">
+              <span className="block text-5xl md:text-7xl font-extrabold tracking-tighter">
+                RAVE
+              </span>
+
+              {/* Decorative tag, removed from flow so centering ignores it */}
+              <span
+                aria-hidden="true"
+                className="absolute top-0 right-0 -translate-y-2 md:-translate-y-3 translate-x-full"
+              >
+                <span className="pl-2 text-xs md:text-sm font-light text-gray-400 tracking-widest uppercase">
+                  Est. 25
+                </span>
+              </span>
             </span>
           </motion.div>
         </motion.div>
