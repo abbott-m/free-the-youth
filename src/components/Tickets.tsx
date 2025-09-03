@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { motion } from 'framer-motion'
@@ -71,12 +72,18 @@ export default function Tickets() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
-                ticket.popular 
-                  ? 'border-white bg-white text-black' 
-                  : 'border-white/20 glass-effect hover:border-white/40'
-              }`}
+              className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${ticket.popular
+                ? 'border-white bg-white text-black'
+                : 'border-white/20 glass-effect hover:border-white/40'
+                }`}
             >
+              {/* Logo top right */}
+              <img
+                src={`${ticket.popular ? '/logo_black.png' : '/logo.png'}`}
+                alt="Logo"
+                className="absolute top-4 right-4 h-8 w-auto object-contain"
+              />
+
               {ticket.popular && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -86,7 +93,7 @@ export default function Tickets() {
                   MOST POPULAR
                 </motion.div>
               )}
-              
+
               <div className="mb-6">
                 <h3 className="text-2xl font-black tracking-tighter mb-2">
                   {ticket.name}
@@ -117,11 +124,10 @@ export default function Tickets() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`w-full py-3 rounded-full font-semibold transition-all duration-300 ${
-                  ticket.popular 
-                    ? 'bg-black text-white hover:bg-gray-800' 
-                    : 'bg-white text-black hover:bg-gray-200'
-                }`}
+                className={`w-full py-3 rounded-full font-semibold transition-all duration-300 ${ticket.popular
+                  ? 'bg-black text-white hover:bg-gray-800'
+                  : 'bg-white text-black hover:bg-gray-200'
+                  }`}
               >
                 SELECT {ticket.name}
               </motion.button>
