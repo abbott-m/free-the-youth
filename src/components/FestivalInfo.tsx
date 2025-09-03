@@ -221,7 +221,7 @@ export default function FestivalInfo() {
 
   const weatherForecast = [
     {
-      day: 'Friday, July 14',
+      day: 'Friday, October 14',
       high: 32,
       low: 24,
       condition: 'Partly Cloudy',
@@ -231,7 +231,7 @@ export default function FestivalInfo() {
       rain: '10%'
     },
     {
-      day: 'Saturday, July 15',
+      day: 'Saturday, October 15',
       high: 30,
       low: 23,
       condition: 'Sunny',
@@ -241,7 +241,7 @@ export default function FestivalInfo() {
       rain: '5%'
     },
     {
-      day: 'Sunday, July 16',
+      day: 'Sunday, October 16',
       high: 29,
       low: 22,
       condition: 'Light Rain',

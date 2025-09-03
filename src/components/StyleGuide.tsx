@@ -283,7 +283,7 @@ export default function StyleGuide() {
       image: '/api/placeholder/300/200',
       description: 'Ethically-made festival wear celebrating African artisans and sustainable fashion practices.',
       priceRange: '₵200-800',
-      dropDate: 'July 1st',
+      dropDate: 'October 1st',
       designer: 'Rosario Dawson & Abrima Erwiah',
       inspiration: 'Artisan craftsmanship meets modern design',
       sustainability: '100% ethical production'

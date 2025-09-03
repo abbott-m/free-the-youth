@@ -89,7 +89,7 @@ export default function Hero() {
         >
           <div className="flex items-center justify-center space-x-3">
             <Calendar className="w-5 h-5" />
-            <span className="text-sm tracking-wide">JULY 15-16, 2025</span>
+            <span className="text-sm tracking-wide">October 15-16, 2025</span>
           </div>
           <div className="flex items-center justify-center space-x-3">
             <MapPin className="w-5 h-5" />

@@ -261,7 +261,7 @@ export default function Merch() {
     {
       id: 'festival-exclusive',
       title: 'FESTIVAL EXCLUSIVE',
-      date: 'July 15-16 Only',
+      date: 'October 15-16 Only',
       status: 'upcoming',
       description: 'On-site exclusive items only available during the festival weekend. Limited quantities, maximum hype.',
       color: 'from-purple-500 to-pink-500',
@@ -271,7 +271,7 @@ export default function Merch() {
     {
       id: 'post-festival',
       title: 'MEMORY COLLECTION',
-      date: 'July 20+',
+      date: 'October 20+',
       status: 'coming-soon',
       description: 'Commemorative pieces for those who experienced the magic or missed out on the festival weekend.',
       color: 'from-orange-500 to-red-500',
