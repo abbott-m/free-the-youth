@@ -21,24 +21,24 @@ export default function Hero() {
       </div>
 
       <motion.div
-        animate={{ 
+        animate={{
           rotate: [0, 360],
           scale: [1, 1.1, 1]
         }}
-        transition={{ 
+        transition={{
           duration: 20,
           repeat: Infinity,
           ease: "linear"
         }}
         className="absolute top-1/4 right-1/4 w-32 h-32 border-2 border-white/20 rounded-full"
       />
-      
+
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, -20, 0],
           x: [0, 10, 0]
         }}
-        transition={{ 
+        transition={{
           duration: 8,
           repeat: Infinity,
           ease: "easeInOut"
@@ -53,7 +53,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="mb-8"
         >
-          <motion.h1 
+          <motion.h1
             className="text-6xl md:text-8xl font-black tracking-tighter mb-4"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
@@ -63,22 +63,27 @@ export default function Hero() {
             <span className="text-stroke">THE</span><br />
             YOUTH
           </motion.h1>
-          
+
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: '100%' }}
             transition={{ duration: 1.5, delay: 1 }}
             className="h-0.5 bg-white max-w-sm mx-auto mb-6"
           />
-          
-          <motion.p
+
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="text-xl md:text-2xl font-light tracking-wide text-gray-300"
+            className="flex items-baseline justify-center space-x-2"
           >
-            RAVE 2025
-          </motion.p>
+            <span className="text-5xl md:text-7xl font-extrabold tracking-tighter">
+              RAVE
+            </span>
+            <span className="text-sm md:text-base font-light text-gray-400 tracking-widest uppercase">
+              Est. 25
+            </span>
+          </motion.div>
         </motion.div>
 
         <motion.div
@@ -114,7 +119,7 @@ export default function Hero() {
           >
             GET TICKETS
           </motion.button>
-          
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
