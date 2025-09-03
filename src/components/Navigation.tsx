@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 'use client'
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ShoppingBag } from 'lucide-react'
+import Image from "next/image";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,11 +36,16 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold tracking-tight"
-          >
-            FREE THE YOUTH
+          <motion.div whileHover={{ scale: 1.05 }} className="w-32">
+            <a href="/">
+              <Image
+                src="/logo.png"
+                alt="Festival Logo"
+                width={50}
+                height={50}
+                priority
+              />
+            </a>
           </motion.div>
 
           <div className="hidden md:flex items-center space-x-8">
