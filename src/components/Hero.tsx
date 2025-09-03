@@ -77,7 +77,7 @@ export default function Hero() {
             transition={{ delay: 1.2 }}
             className="text-xl md:text-2xl font-light tracking-wide text-gray-300"
           >
-            FASHION FESTIVAL 2025
+            RAVE 2025
           </motion.p>
         </motion.div>
 
