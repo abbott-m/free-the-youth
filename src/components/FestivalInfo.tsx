@@ -1,0 +1,27 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
+export default function FestivalInfo() {
+  return (
+    <section id="info" className="py-24 relative">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
+            FESTIVAL<br />
+            <span className="text-stroke">INFO</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Everything you need to know for the perfect festival experience.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
