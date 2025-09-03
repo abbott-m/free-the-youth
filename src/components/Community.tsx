@@ -305,28 +305,6 @@ export default function Community() {
       hashtags: ['#diy', '#sustainablefashion', '#tutorial'],
       timestamp: '2 hours ago',
       trending: false
-    },
-    {
-      id: 'post-104',
-      user: {
-        name: 'Festival Diaries',
-        handle: '@festival.diaries',
-        avatar: '/api/placeholder/50/50',
-        verified: true
-      },
-      type: 'story',
-      content: {
-        story: '/api/placeholder/300/500',
-        caption: 'Behind the scenes at Free the Youth setup! The energy is already incredible 🎪⚡'
-      },
-      engagement: {
-        likes: '3.4K',
-        comments: '123',
-        shares: '67'
-      },
-      hashtags: ['#behindthescenes', '#festival', '#setup'],
-      timestamp: '3 hours ago',
-      trending: true
     }
   ]
 
@@ -604,14 +582,14 @@ export default function Community() {
           >
             <Hash className="w-6 h-6 text-pink-500" />
             <span className="text-xl font-bold tracking-wide">{selectedHashtag.toUpperCase()}</span>
-            <motion.div
+            {/* <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="flex items-center space-x-1 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold"
             >
               <Flame className="w-4 h-4" />
               <span>TRENDING</span>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Tab Navigation */}
@@ -948,17 +926,6 @@ export default function Community() {
                     </div>
                   </motion.div>
                 ))}
-              </div>
-
-              {/* Load More */}
-              <div className="text-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-black px-8 py-3 rounded-2xl font-bold hover:bg-gray-200 transition-colors"
-                >
-                  Load More Posts
-                </motion.button>
               </div>
             </motion.div>
           )}

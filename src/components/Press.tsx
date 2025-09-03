@@ -172,22 +172,6 @@ export default function Press() {
       impact: 'medium',
       featured: false,
       url: '#'
-    },
-    {
-      id: 'article-6',
-      outlet: 'BRITISH VOGUE',
-      headline: 'Sustainable Fashion Takes Center Stage at Free the Youth',
-      type: 'Sustainability Feature',
-      date: '2024-05-15',
-      author: 'Sarah Johnson',
-      readTime: '5 min read',
-      reach: '3.2M readers',
-      image: '/api/placeholder/600/400',
-      excerpt: 'The festival\'s commitment to sustainability and ethical fashion practices is setting new standards for events worldwide...',
-      tags: ['Sustainability', 'Fashion', 'Environment'],
-      impact: 'high',
-      featured: true,
-      url: '#'
     }
   ]
 
