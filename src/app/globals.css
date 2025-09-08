@@ -13,6 +13,69 @@
   }
 }
 
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue'), local('HelveticaNeue'),
+       url('/fonts/HelveticaNeue.woff2') format('woff2'),
+       url('/fonts/HelveticaNeue.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Bold'), local('HelveticaNeue-Bold'),
+       url('/fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+       url('/fonts/HelveticaNeue-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+/* Typography system based on brand guidelines */
+.font-helvetica {
+  font-family: 'Helvetica Neue', 'Helvetica', system-ui, -apple-system, sans-serif;
+}
+
+.text-festival-headline {
+  font-family: 'Helvetica Neue', 'Helvetica', system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.text-festival-subhead {
+  font-family: 'Helvetica Neue', 'Helvetica', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-festival-body {
+  font-family: 'Helvetica Neue', 'Helvetica', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Poster-style typography treatments */
+.text-poster-style {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 0.8;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+/* Condensed headlines for impact */
+.text-condensed {
+  font-stretch: condensed;
+  letter-spacing: -0.08em;
+}
+
 @layer utilities {
   .text-stroke {
     -webkit-text-stroke: 1px white;
@@ -28,4 +91,95 @@
   .noise-bg {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
   }
+}
+
+/* Updated color system based on brand guidelines */
+:root {
+  /* Brand Colors from PDF */
+  --festival-red: #DC143C;
+  --festival-orange: #FF6347;
+  --festival-yellow: #FFD700;
+  --festival-pink: #FF69B4;
+  --festival-purple: #8A2BE2;
+  --festival-blue: #4169E1;
+  --festival-green: #32CD32;
+  
+  /* Gradient backgrounds */
+  --primary-gradient: linear-gradient(135deg, #FF6347 0%, #FFD700 50%, #DC143C 100%);
+  --secondary-gradient: linear-gradient(135deg, #FF69B4 0%, #8A2BE2 50%, #4169E1 100%);
+  --hero-gradient: linear-gradient(135deg, #DC143C 0%, #FF6347 30%, #FFD700 70%, #FF69B4 100%);
+}
+
+/* Vibrant section backgrounds */
+.hero-section {
+  background: var(--hero-gradient);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+/* Layered image effects */
+.layered-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.layered-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,99,71,0.3) 0%, rgba(255,215,0,0.3) 50%, rgba(220,20,60,0.3) 100%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Duotone effects for images */
+.duotone-red-yellow {
+  filter: sepia(100%) saturate(200%) hue-rotate(320deg) brightness(1.2) contrast(1.1);
+}
+
+.duotone-pink-blue {
+  filter: sepia(100%) saturate(200%) hue-rotate(240deg) brightness(1.1) contrast(1.2);
+}
+
+/* Background variations for different sections */
+.section-bg-1 { background: linear-gradient(135deg, #FF6347 0%, #FFD700 100%); }
+.section-bg-2 { background: linear-gradient(135deg, #FF69B4 0%, #8A2BE2 100%); }
+.section-bg-3 { background: linear-gradient(135deg, #32CD32 0%, #4169E1 100%); }
+.section-bg-4 { background: linear-gradient(135deg, #FFD700 0%, #DC143C 100%); }
+
+/* Text treatments */
+.text-vibrant-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-shadow-vibrant {
+  text-shadow: 
+    0 0 10px rgba(255,99,71,0.5),
+    0 0 20px rgba(255,215,0,0.3),
+    0 0 30px rgba(220,20,60,0.2);
+}
+
+/* Glass effect with color */
+.glass-effect-vibrant {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(255,99,71,0.1);
 }
